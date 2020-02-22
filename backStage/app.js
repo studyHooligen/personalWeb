@@ -30,7 +30,10 @@ app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+
+  res.redirect("/index"); //注意此处将所有未知路由引导到主页
+
+  //next(createError(404));
 });
 
 // error handler
